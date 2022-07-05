@@ -1,10 +1,11 @@
 import React from "react";
 
 
-function Modal() {
+function Modal(props) {
     return (
         <div className="Modal">
 
+            <button className="Modal-close" onClick={props.onClick}>X</button>
             <p className="Modal-info">Are you sure?</p>
             <div>
                 <button className="Modal-btn">Cancel</button>

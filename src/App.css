@@ -148,7 +148,7 @@
   text-align: center;
   justify-content: center;
   align-items: center; */
-
+  position: relative;
   display: flex;
   flex-direction: column;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
@@ -209,6 +209,24 @@
 .Modal-btn:nth-child(2):hover {
   cursor: pointer;
   background-color: rgb(174, 1, 1)
+}
+
+
+.Modal-close {
+  position: absolute;
+  top: 0;
+  left: 93.7%;
+  width: 30px;
+  font-size: 17px;
+  padding: 0.2rem;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: maroon;
+}
+
+.Modal-close:hover {
+  cursor: pointer;
 }
 
 
