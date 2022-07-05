@@ -8,6 +8,38 @@
 }
 
 
+/* Main Container Styling  */
+
+.Container {
+  position: relative;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+/* Todo-Heading styling   */
+
+.Todo-heading {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 50px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /* outline: auto; */
+  /* padding-bottom: 5rem; */
+
+}
+
+
+
+
+
 /* Todo Styling  */
 .Todo {
   /* outline: auto; */
@@ -40,6 +72,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.Todo-button:hover {
+  cursor: pointer;
+  background-color: rgb(253, 64, 64);
+}
+
 
 
 
@@ -56,9 +93,11 @@
 /* Form styling  */
 
 
+
 .Form {
   display: flex;
   width: 100%;
+  margin-bottom: 1rem;
   /* outline: auto; */
 
 }
@@ -76,17 +115,116 @@
 }
 
 .Form > button {
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   width: 100px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  background-color: rgb(51, 51, 222);
+  background-color: rgb(44, 44, 192);
   color: white;
   font-weight: 600;
   border: none;
 }
 
+.Form > button:hover {
+  cursor: pointer;
+  background-color: rgb(44, 44, 255);
 
+}
+
+
+
+
+
+/* Modal Styling  */
+
+
+.Modal {
+
+  /* position: absolute;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center; */
+
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: white;
+  padding: 2rem;
+  text-align: center;
+  width: 30rem;
+  z-index: 2  ;
+  position: fixed;
+  left: calc(50% - 15rem);
+
+  
+}
+
+.Modal-info {
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.Modal-btn {
+
+  font-family: 'Poppins', sans-serif;;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+
+  font-size: 20px;
+
+
+}
+
+.Modal-btn:nth-child(1) {
+  color: maroon;
+  margin-right: 1rem;
+  font-weight: 600;
+  background: none;
+  border: 2px solid maroon;
+}
+
+.Modal-btn:nth-child(2) {
+  margin-left: 1rem;
+  background: maroon;
+  color: white;
+  border: none;
+  border: 2px solid rgb(128, 0, 0);
+  font-weight: 600;
+}
+
+.Modal-btn:nth-child(1):hover {
+  cursor: pointer;
+  background-color: rgb(236, 234, 234);
+}
+
+.Modal-btn:nth-child(2):hover {
+  cursor: pointer;
+  background-color: rgb(174, 1, 1)
+}
+
+
+
+
+/* Backdrop styling  */
+
+.Backdrop {
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
 
 
 
