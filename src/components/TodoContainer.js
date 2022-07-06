@@ -6,6 +6,7 @@ import Form from "./form";
 // import data from './data';
 import '../App.css';
 import data from "./data";
+import leftBlob from '../images/leftBlob.svg'
 
 
 
@@ -84,13 +85,16 @@ function TodoContainer() {
 
 
   return (
-      <div className = 'Container'>
-        <h1 className="Todo-heading">Todo App</h1>
-        <Form onSubmit = {addTodo}/>
-        <section className='Todo-Container'>
-          {dataMod}
-        </section>
-        <p className="Todo-Pending-Counter">Todos pending: {TodosPending}</p>
+      <div className="img-Container">
+        <div className = 'Container'>
+          <h1 className="Todo-heading">Todo App</h1>
+          <Form onSubmit = {addTodo}/>
+          <section className='Todo-Container'>
+            {dataMod}
+          </section>
+          <p className="Todo-Pending-Counter">Todos pending: {TodosPending}</p>
+        </div>
+        <img src={leftBlob} className="img-style"/>
       </div>
   );
 }
