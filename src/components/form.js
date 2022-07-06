@@ -15,7 +15,6 @@ function Form(props) {
 
         if(!inputVal) return;
 
-
         // console.log(inputVal);
         props.onSubmit(inputVal);
         

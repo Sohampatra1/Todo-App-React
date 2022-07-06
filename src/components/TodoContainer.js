@@ -15,12 +15,27 @@ function TodoContainer() {
 
   const [TodosPending, setTodosPending] = useState(0);
 
-  const [todo, setTodo] = useState(data);
-  
+  // local storage 
+  const [todo, setTodo] = useState(() => {
+    const savedTodos = localStorage.getItem('todos');
+
+    if(savedTodos) {
+      return JSON.parse(savedTodos);
+    }
+    else {
+      return [];
+    }
+  });
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todo));
+  }, [todo])
 
   useEffect(() => {
     setTodosPending(todo.filter(eachTodo => !eachTodo.complete).length);
   });
+
+
 
   function completeHandler(id) {
     // console.log("done");
