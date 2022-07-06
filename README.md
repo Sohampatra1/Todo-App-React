@@ -1,7 +1,16 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Link
+https://raunakgn2001.github.io/Todo-App-React/
+## Description
 
+This a Todo List Web Application built using React component structures and Hooks. 
+Functionalities provided:
+  - User can create new tasks.
+  - User can delete tasks.
+  - User can mark a particular task as completed and later delete it accordingly.
+  - All tasks added into the list are stored in Local Storage , so user can get back all his/her saved tasks even after reload.
+  
 ## Available Scripts
 
 In the project directory, you can run:
