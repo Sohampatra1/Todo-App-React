@@ -8,7 +8,8 @@ function Modal(props) {
     }
 
     function ConfirmHandler() {
-        console.log("Confirm");
+        props.onClick();
+        props.deleteHandler();
     }
 
     return (

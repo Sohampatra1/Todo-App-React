@@ -10,7 +10,7 @@ function Todo(props) {
   // has the initial value of false
     
 
-    function deleteHandler() {
+    function openModalHandler() {
         // our aim is whenever the user clicks on the Delete Button on any Todo .. The modalIsOpen 
         // state variable gets to true and the modal will pop up
         setModalIsOpen(true);
@@ -24,16 +24,24 @@ function Todo(props) {
         const id = props.todo.id;
         console.log(id);
         props.completeHandler(id);
+
+        props.pendingHandler();
+
+    }
+
+    function deleteHandler() {
+        console.log(props.todo.id);
+        props.removeTodo(props.todo.id);
     }
 
     return (
      <Fragment>   
         <div className="Todo">
-            <input type="checkbox" onClick={toggleHandler} className="Todo-complete" checked = {props.todo.complete ? "checked" : null}/>
+            <input type="checkbox" onClick={toggleHandler} className="Todo-complete" checked = {props.todo.complete == true} />
             <p className = {props.todo.complete ? "Todo-info line-through" : "Todo-info"} >{props.todo.task}</p> 
-            <button className="Todo-button" onClick={deleteHandler}>Delete</button>
+            <button className="Todo-button" onClick={openModalHandler}>Delete</button>
         </div>
-        {modalIsOpen && <Modal onClick={closeModalHandler} />}
+        {modalIsOpen && <Modal onClick={closeModalHandler} deleteHandler={deleteHandler} />}
         {modalIsOpen && <Backdrop />}
     </Fragment>
     )
