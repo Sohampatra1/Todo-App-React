@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Todo-App-React/static/css/main.6085f419.css",
+    "main.js": "/Todo-App-React/static/js/main.7c4316c2.js",
+    "static/media/leftBlob.svg": "/Todo-App-React/static/media/leftBlob.a9ad03605c06a6f2a1381615f10ef087.svg",
+    "index.html": "/Todo-App-React/index.html",
+    "main.6085f419.css.map": "/Todo-App-React/static/css/main.6085f419.css.map",
+    "main.7c4316c2.js.map": "/Todo-App-React/static/js/main.7c4316c2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6085f419.css",
+    "static/js/main.7c4316c2.js"
+  ]
+}
