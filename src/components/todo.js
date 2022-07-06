@@ -3,7 +3,7 @@
 import React, { Fragment, useState } from "react";
 import Modal from "./Modal";
 import Backdrop from "./Backdrop";
-
+import { MdDeleteOutline } from "react-icons/md";
 
 function Todo(props) {
   const [modalIsOpen, setModalIsOpen] = useState(false); // this means modalPop which is a state variable 
@@ -39,7 +39,7 @@ function Todo(props) {
         <div className="Todo">
             <input type="checkbox" onClick={toggleHandler} className="Todo-complete" checked = {props.todo.complete == true} />
             <p className = {props.todo.complete ? "Todo-info line-through" : "Todo-info"} >{props.todo.task}</p> 
-            <button className="Todo-button" onClick={openModalHandler}>Delete</button>
+            <button className="Todo-button" onClick={openModalHandler}><MdDeleteOutline /></button>
         </div>
         {modalIsOpen && <Modal onClick={closeModalHandler} deleteHandler={deleteHandler} />}
         {modalIsOpen && <Backdrop />}
